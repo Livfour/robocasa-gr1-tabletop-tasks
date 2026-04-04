@@ -124,7 +124,8 @@ import robosuite
 assert robosuite.__version__ in [
     "1.5.0",
     "1.5.1",
-], "robosuite version must be 1.5.{0,1}. Please install the correct version"
+    "1.5.2",
+], "robosuite version must be 1.5.{0,1,2}. Please install the correct version"
 
 __version__ = "0.2.0"
 __logo__ = """
