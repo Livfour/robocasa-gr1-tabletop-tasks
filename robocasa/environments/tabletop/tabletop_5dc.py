@@ -1,8 +1,3 @@
-import numpy as np
-from typing import Tuple
-from robocasa.environments.tabletop.tabletop_24dc import (
-    PositionSampler as PositionSamplerOld,
-)
 from robocasa.environments.tabletop.tabletop_24dc import generate_task_classes
 
 # generate tasks with a specific object category as target object

@@ -1,5 +1,3 @@
-import xml.etree.ElementTree as ET
-from copy import deepcopy
 
 import numpy as np
 from robosuite.models.objects import BoxObject
@@ -9,7 +7,6 @@ from robosuite.utils.mjcf_utils import string_to_array as s2a
 from robosuite.utils.mjcf_utils import xml_path_completion
 
 import robocasa
-from robocasa.models.fixtures import Fixture
 
 
 class Box(BoxObject):

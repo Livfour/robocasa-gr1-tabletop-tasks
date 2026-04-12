@@ -1,7 +1,7 @@
 from robocasa.environments.tabletop.tabletop import *
 from robocasa.environments.tabletop.tabletop_pnp import DEFAULT_DISTRACTOR_CONFIG
 from robocasa.utils.dexmg_utils import DexMGConfigHelper
-from robocasa.utils.object_utils import check_obj_in_receptacle, obj_inside_of
+from robocasa.utils.object_utils import obj_inside_of
 
 DISTRACTOR_CONFIG = DEFAULT_DISTRACTOR_CONFIG.copy()
 DISTRACTOR_CONFIG["regions"]["back_edge"]["objects"] = [

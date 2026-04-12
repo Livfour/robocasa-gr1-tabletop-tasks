@@ -1,7 +1,5 @@
 import argparse
 import os
-import sys
-import time
 import urllib.request
 from pathlib import Path
 from zipfile import ZipFile
@@ -111,7 +109,7 @@ def download_url(url, download_dir, fname=None, check_overwrite=True):
         assert user_response.lower() in {
             "yes",
             "y",
-        }, f"Did not receive confirmation. Aborting download."
+        }, "Did not receive confirmation. Aborting download."
 
     print(colored(f"Downloading to {file_to_write}", "yellow"))
 
@@ -149,7 +147,7 @@ def download_and_extract_zip(
 
     if prompt_before_download:
         ans = input(
-            "Assets to be downloaded may be a few Gb. Proceed? (y/n) ".format(folder)
+            "Assets to be downloaded may be a few Gb. Proceed? (y/n) "
         )
 
         if ans == "y":

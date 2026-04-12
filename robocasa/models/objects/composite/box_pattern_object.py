@@ -2,7 +2,6 @@ import numpy as np
 
 from robosuite.models.objects import CompositeObject
 from robosuite.utils.mjcf_utils import add_to_dict
-import robosuite.utils.transform_utils as T
 
 
 class BoxPatternObject(CompositeObject):

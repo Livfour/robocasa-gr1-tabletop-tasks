@@ -114,7 +114,7 @@ class TabletopDrawerPnPClose(Tabletop, DexMGConfigHelper):
         # Add objects to manipulate
         cfgs.append(
             dict(
-                name=f"obj",
+                name="obj",
                 obj_groups=self.obj_groups,
                 exclude_obj_groups=self.exclude_obj_groups,
                 graspable=True,

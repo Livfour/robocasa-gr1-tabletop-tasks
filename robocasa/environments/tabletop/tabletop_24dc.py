@@ -1,7 +1,6 @@
 from typing import List, Tuple
 import numpy as np
 from copy import deepcopy
-from itertools import combinations, chain
 
 import robocasa.utils.object_utils as OU
 from robocasa.environments.tabletop.tabletop_pnp import TabletopPnP

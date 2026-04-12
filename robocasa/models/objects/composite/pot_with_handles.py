@@ -153,7 +153,7 @@ class PotWithHandlesObject(CompositeObject):
 
         # Add main pot body
         # Base geom
-        name = f"base"
+        name = "base"
         self.pot_base = [name]
         add_to_dict(
             dic=obj_args,

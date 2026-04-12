@@ -1,10 +1,7 @@
 import os
 import sys
 import gymnasium as gym
-import numpy as np
-import pytest
 from pathlib import Path
-from gymnasium import spaces
 
 import robocasa  # noqa: F401
 import robosuite  # noqa: F401

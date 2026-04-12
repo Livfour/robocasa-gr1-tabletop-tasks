@@ -1,4 +1,3 @@
-from collections import OrderedDict
 from copy import deepcopy
 import yaml
 from robosuite.utils.mjcf_utils import xml_path_completion

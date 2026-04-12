@@ -3,7 +3,7 @@ import time
 import xml.etree.ElementTree as ET
 import numpy as np
 from robosuite.models.objects import MujocoXMLObject
-from robosuite.utils.mjcf_utils import array_to_string, find_elements, string_to_array
+from robosuite.utils.mjcf_utils import array_to_string, string_to_array
 import robocasa
 
 XML_ASSETS_BASE_PATH = os.path.join(robocasa.__path__[0], "models/assets/gear_kitchen")

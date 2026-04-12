@@ -1,5 +1,4 @@
 import abc
-import os
 from xml.etree import ElementTree as ET
 
 import numpy as np

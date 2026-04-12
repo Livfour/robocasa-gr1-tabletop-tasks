@@ -1,13 +1,11 @@
-from robosuite.models.objects import CompositeBodyObject, BoxObject, CylinderObject
+from robosuite.models.objects import CompositeBodyObject, BoxObject
 import numpy as np
 
 import robosuite.utils.transform_utils as T
-from robosuite.utils.mjcf_utils import array_to_string
-from robosuite.utils.mjcf_utils import RED, BLUE, CustomMaterial
+from robosuite.utils.mjcf_utils import CustomMaterial
 from .inverse_stacked_cylinder import InverseStackedCylinderObject
 from .lightbulb import LightbulbObject
 
-import robosuite_task_zoo
 from robosuite_task_zoo.models.kitchen import StoveObject
 
 

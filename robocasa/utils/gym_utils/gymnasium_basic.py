@@ -1,12 +1,8 @@
-import datetime, uuid
-from copy import deepcopy
 import gymnasium as gym
 import numpy as np
-import os
 import robocasa  # we need this to register environments  # noqa: F401
 import robosuite
 from gymnasium import spaces
-from robocasa.environments.tabletop.tabletop import Tabletop
 from robocasa.models.robots import (
     GROOT_ROBOCASA_ENVS_GR1_ARMS_ONLY,
     GROOT_ROBOCASA_ENVS_GR1_ARMS_AND_WAIST,
@@ -15,7 +11,6 @@ from robocasa.models.robots import (
     make_key_converter,
 )
 from robosuite.controllers import load_composite_controller_config
-from robosuite.controllers.parts.arm.osc import OperationalSpaceController
 from robosuite.controllers.composite.composite_controller import HybridMobileBase
 from robosuite.environments.base import REGISTERED_ENVS
 

@@ -10,7 +10,6 @@ from robocasa.models.objects.xml_objects import (
 import numpy as np
 
 from robosuite.utils.mjcf_utils import array_to_string
-from robosuite.utils.mjcf_utils import RED, BLUE, CustomMaterial
 
 
 class CoffeeMachineObject(CompositeBodyObject):

@@ -1,6 +1,6 @@
 import numpy as np
 
-from robosuite.models.objects import BoxObject, CompositeBodyObject, CylinderObject
+from robosuite.models.objects import BoxObject, CompositeBodyObject
 from robosuite.utils.mjcf_utils import BLUE, RED, CustomMaterial, array_to_string
 
 

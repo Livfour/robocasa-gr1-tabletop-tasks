@@ -1,4 +1,3 @@
-import numpy as np
 
 from robosuite.models.objects import (
     BoxObject,
@@ -6,7 +5,7 @@ from robosuite.models.objects import (
     CylinderObject,
     ConeObject,
 )
-from robosuite.utils.mjcf_utils import BLUE, RED, CustomMaterial, array_to_string
+from robosuite.utils.mjcf_utils import array_to_string
 
 
 class SprayBottleObject(CompositeBodyObject):

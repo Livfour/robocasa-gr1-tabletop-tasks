@@ -1,8 +1,6 @@
 import abc
 import os
-import random
 import xml.etree.ElementTree as ET
-from copy import deepcopy
 from enum import IntEnum
 
 import numpy as np
@@ -10,7 +8,6 @@ import robosuite.utils.transform_utils as T
 from robosuite.utils.mjcf_utils import (
     array_to_string,
     find_elements,
-    find_parent,
     string_to_array,
     xml_path_completion,
 )

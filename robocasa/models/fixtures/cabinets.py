@@ -1,11 +1,9 @@
 from copy import deepcopy
-from xml.etree import ElementTree as ET
 
 import numpy as np
 from robosuite.utils.mjcf_utils import array_to_string as a2s
 from robosuite.utils.mjcf_utils import (
     find_elements,
-    find_parent,
     new_geom,
     xml_path_completion,
 )

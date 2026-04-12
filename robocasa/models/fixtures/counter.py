@@ -1,6 +1,4 @@
 import math
-import random
-from copy import deepcopy
 
 import numpy as np
 from robosuite.utils.mjcf_utils import array_to_string as a2s

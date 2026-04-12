@@ -1,5 +1,4 @@
 import sys
-from typing import Any, Dict
 
 import cv2
 import numpy as np

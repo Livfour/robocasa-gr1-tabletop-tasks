@@ -1,14 +1,11 @@
 from robosuite.models.objects import (
     CompositeBodyObject,
-    BoxObject,
     CylinderObject,
     HollowCylinderObject,
 )
 import numpy as np
 
 import robosuite.utils.transform_utils as T
-from robosuite.utils.mjcf_utils import array_to_string
-from robosuite.utils.mjcf_utils import RED, BLUE, CustomMaterial
 
 
 class CupObject(CompositeBodyObject):
