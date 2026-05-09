@@ -99,9 +99,9 @@ class TabletopDrawerPnPClose(Tabletop, DexMGConfigHelper):
         """
         ep_meta = super().get_ep_meta()
         obj_lang = self.get_obj_lang(obj_name="obj")
-        ep_meta[
-            "lang"
-        ] = f"pick up the {obj_lang}, place it into the drawer and close the drawer"
+        ep_meta["lang"] = (
+            f"pick up the {obj_lang}, place it into the drawer and close the drawer"
+        )
         return ep_meta
 
     def _get_obj_cfgs(self):

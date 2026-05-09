@@ -272,7 +272,7 @@ def get_excluded_obj_cats(obj_cats: List[str]) -> List[str]:
 
 
 def get_excluded_container_combos(
-    container_combos: List[Tuple[str, str]]
+    container_combos: List[Tuple[str, str]],
 ) -> List[Tuple[str, str]]:
     """Get all valid container combinations that are not in val_container_combos."""
     all_combos = []
@@ -288,6 +288,7 @@ def get_excluded_container_combos(
 # ===============================================================================
 #                             Class Generation
 # ===============================================================================
+
 
 def create_pnp_class(
     class_name: str,
@@ -461,7 +462,7 @@ def create_pnp_class(
 
             for cfg in invalid_obj_cfgs:
                 self.object_cfgs.remove(cfg)
- 
+
             self.object_cfgs = addl_obj_cfgs + self.object_cfgs
 
             # # remove objects that didn't get created
@@ -623,7 +624,6 @@ def create_pnp_class(
         return check_grasp_distractor_obj
 
     def _check_success(self):
-
         gripper_container_far = OU.any_gripper_obj_far(self, obj_name="container")
         gripper_obj_far = OU.any_gripper_obj_far(self, obj_name="obj")
         if self.target_container in [
@@ -734,7 +734,7 @@ def generate_task_classes(
     source_containers_set = set([c for c, _ in container_combos])
     target_containers_set = set([t for _, t in container_combos])
     for source_container, target_container in container_combos:
-        class_name = f"{prefix}From{source_container.replace('_','').title()}To{target_container.replace('_','').title()}"
+        class_name = f"{prefix}From{source_container.replace('_', '').title()}To{target_container.replace('_', '').title()}"
         if postfix:
             class_name += postfix
 
@@ -1013,14 +1013,13 @@ for obj_group in ["fruit"]:
 
 
 if __name__ == "__main__":
-
-    RED = '\033[91m'
-    GREEN = '\033[92m'
-    YELLOW = '\033[93m'
-    BLUE = '\033[94m'
-    MAGENTA = '\033[95m'
-    CYAN = '\033[96m'
-    RESET = '\033[0m'  # Resets color to terminal default
+    RED = "\033[91m"
+    GREEN = "\033[92m"
+    YELLOW = "\033[93m"
+    BLUE = "\033[94m"
+    MAGENTA = "\033[95m"
+    CYAN = "\033[96m"
+    RESET = "\033[0m"  # Resets color to terminal default
 
     # print pretrain task names
     print(f"{GREEN}DC24 Pretrain task names: {len(pretrain_task_infos)} {RESET}")
@@ -1032,5 +1031,3 @@ if __name__ == "__main__":
     print(f"{GREEN}DC24 Posttrain task names: {len(posttrain_task_infos)} {RESET}")
     for task_info in posttrain_task_infos:
         print(f"{task_info['class_name']}")
-
-

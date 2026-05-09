@@ -86,9 +86,9 @@ class ObjectPositionSampler:
             else mujoco_objects
         )
         for obj in mujoco_objects:
-            assert (
-                obj not in self.mujoco_objects
-            ), "Object '{}' already in sampler!".format(obj.name)
+            assert obj not in self.mujoco_objects, (
+                "Object '{}' already in sampler!".format(obj.name)
+            )
             self.mujoco_objects.append(obj)
 
     def reset(self):
@@ -321,10 +321,10 @@ class UniformRandomSampler(ObjectPositionSampler):
         if reference is None:
             base_offset = self.reference_pos
         elif type(reference) is str:
-            assert (
-                reference in placed_objects
-            ), "Invalid reference received. Current options are: {}, requested: {}".format(
-                placed_objects.keys(), reference
+            assert reference in placed_objects, (
+                "Invalid reference received. Current options are: {}, requested: {}".format(
+                    placed_objects.keys(), reference
+                )
             )
             ref_pos, _, ref_obj = placed_objects[reference]
             base_offset = np.array(ref_pos)
@@ -335,15 +335,15 @@ class UniformRandomSampler(ObjectPositionSampler):
         # then we treat it as a reference to a specific shelf level
         elif type(reference) is tuple and len(reference) == 2:
             (reference, spawn_id) = reference
-            assert (
-                reference in placed_objects
-            ), "Invalid reference received. Current options are: {}, requested: {}".format(
-                placed_objects.keys(), reference
+            assert reference in placed_objects, (
+                "Invalid reference received. Current options are: {}, requested: {}".format(
+                    placed_objects.keys(), reference
+                )
             )
             ref_pos, _, ref_obj = placed_objects[reference]
-            assert isinstance(
-                ref_obj, MJCFObject
-            ), "Invalid reference received. Should be of type MJCFObject"
+            assert isinstance(ref_obj, MJCFObject), (
+                "Invalid reference received. Should be of type MJCFObject"
+            )
             if spawn_id == -1:
                 spawn_id, site = ref_obj.get_random_spawn(
                     self.rng, exclude_disabled=True
@@ -357,18 +357,18 @@ class UniformRandomSampler(ObjectPositionSampler):
             spawn_ref_obj = ref_obj
         else:
             base_offset = np.array(reference)
-            assert (
-                base_offset.shape[0] == 3
-            ), "Invalid reference received. Should be (x,y,z) 3-tuple, but got: {}".format(
-                base_offset
+            assert base_offset.shape[0] == 3, (
+                "Invalid reference received. Should be (x,y,z) 3-tuple, but got: {}".format(
+                    base_offset
+                )
             )
 
         # Sample pos and quat for all objects assigned to this sampler
         for obj in self.mujoco_objects:
             # First make sure the currently sampled object hasn't already been sampled
-            assert (
-                obj.name not in placed_objects
-            ), "Object '{}' has already been sampled!".format(obj.name)
+            assert obj.name not in placed_objects, (
+                "Object '{}' has already been sampled!".format(obj.name)
+            )
 
             success = False
 
@@ -477,10 +477,10 @@ class UniformRandomSampler(ObjectPositionSampler):
 
                 if self.ensure_object_out_of_ref_region and neg_reference is not None:
                     for nf in neg_reference:
-                        assert (
-                            nf in placed_objects
-                        ), "Invalid negative reference received. Current options are: {}, requested: {}".format(
-                            placed_objects.keys(), nf
+                        assert nf in placed_objects, (
+                            "Invalid negative reference received. Current options are: {}, requested: {}".format(
+                                placed_objects.keys(), nf
+                            )
                         )
                         _ref_pos, _ref_quat, _ref_obj = placed_objects[nf]
                         if obj_in_region(
@@ -548,9 +548,9 @@ class SequentialCompositeSampler(ObjectPositionSampler):
         """
         # Verify that all added mujoco objects haven't already been added, and add to this sampler's objects dict
         for obj in sampler.mujoco_objects:
-            assert (
-                obj not in self.mujoco_objects
-            ), f"Object '{obj.name}' already has sampler associated with it!"
+            assert obj not in self.mujoco_objects, (
+                f"Object '{obj.name}' already has sampler associated with it!"
+            )
             self.mujoco_objects.append(obj)
         self.samplers[sampler.name] = sampler
         self.sample_args[sampler.name] = sample_args
@@ -600,9 +600,9 @@ class SequentialCompositeSampler(ObjectPositionSampler):
             else mujoco_objects
         )
         for obj in mujoco_objects:
-            assert (
-                obj not in self.mujoco_objects
-            ), f"Object '{obj.name}' already has sampler associated with it!"
+            assert obj not in self.mujoco_objects, (
+                f"Object '{obj.name}' already has sampler associated with it!"
+            )
             self.mujoco_objects.append(obj)
         # Make sure sampler_name exists
         assert sampler_name in self.samplers.keys(), (

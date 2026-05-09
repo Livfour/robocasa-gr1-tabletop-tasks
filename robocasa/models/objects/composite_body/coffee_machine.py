@@ -25,7 +25,6 @@ class CoffeeMachineObject(CompositeBodyObject):
         joints="default",
         density=1000.0,
     ):
-
         # pieces of the coffee machine
         body = CoffeeMachineBodyObject(name="body")
         body_size = body.get_bounding_box_half_size()

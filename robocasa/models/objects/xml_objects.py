@@ -199,7 +199,6 @@ class DrawerObject(MujocoXMLObject):
     """
 
     def __init__(self, name, joints=None):
-
         # original cabinet xml
         # path_to_cabinet_xml = os.path.join(robosuite_task_zoo.__path__[0], "models/hammer_place/cabinet.xml")
 
@@ -242,7 +241,6 @@ class LongDrawerObject(MujocoXMLObject):
     """
 
     def __init__(self, name, joints=None):
-
         # our custom cabinet xml - has some longer geoms for the drawer platform
         path_to_cabinet_xml = os.path.join(
             XML_ASSETS_BASE_PATH, "objects/drawer_long.xml"

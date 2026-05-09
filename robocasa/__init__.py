@@ -106,9 +106,9 @@ from robosuite.robots import ALL_ROBOTS
 
 import mujoco
 
-assert (
-    mujoco.__version__ == "3.2.6"
-), "MuJoCo version must be 3.2.6. Please run pip install mujoco==3.2.6"
+assert mujoco.__version__ == "3.2.6", (
+    "MuJoCo version must be 3.2.6. Please run pip install mujoco==3.2.6"
+)
 
 import numpy
 
@@ -117,7 +117,9 @@ assert numpy.__version__ in [
     "1.23.3",
     "1.23.5",
     "1.26.4",
-], "numpy version must be either 1.23.{2,3,5} or 1.26.4. Please install one of these versions."
+], (
+    "numpy version must be either 1.23.{2,3,5} or 1.26.4. Please install one of these versions."
+)
 
 import robosuite
 

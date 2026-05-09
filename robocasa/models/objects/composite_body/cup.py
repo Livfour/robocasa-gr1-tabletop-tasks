@@ -33,7 +33,6 @@ class CupObject(CompositeBodyObject):
         density=100.0,
         friction=None,
     ):
-
         # Object properties
 
         # radius of the inner cup hole and entire cup

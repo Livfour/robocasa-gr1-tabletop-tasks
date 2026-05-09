@@ -30,7 +30,6 @@ class SocketObject(CompositeBodyObject):
         merge_size=1,
         cylinder_args=None,
     ):
-
         # Object properties
 
         # box geom used for socket base

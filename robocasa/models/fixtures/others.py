@@ -1,4 +1,3 @@
-
 import numpy as np
 from robosuite.models.objects import BoxObject
 from robosuite.utils.mjcf_utils import CustomMaterial
@@ -37,7 +36,7 @@ class Box(BoxObject):
         tex_attrib={"type": "cube"},
         rng=None,
         *args,
-        **kwargs
+        **kwargs,
     ):
         texture = xml_path_completion(texture, root=robocasa.models.assets_root)
         material = CustomMaterial(
@@ -148,7 +147,7 @@ class Wall(BoxObject):
         default_backing_th=0.1,
         rng=None,
         *args,
-        **kwargs
+        **kwargs,
     ):
         # change texture if used for backing
         if backing:
@@ -264,7 +263,7 @@ class Floor(Wall):
             "shininess": "0.1",
         },
         *args,
-        **kwargs
+        **kwargs,
     ):
         # swap x, y axes due to rotation
         size = [size[1], size[0], size[2]]
@@ -280,5 +279,5 @@ class Floor(Wall):
             size=size,
             mat_attrib=mat_attrib,
             *args,
-            **kwargs
+            **kwargs,
         )

@@ -70,7 +70,7 @@ class TabletopLaptopInteraction(Tabletop, DexMGConfigHelper):
         distractor_config=None,
         use_distractors=True,
         *args,
-        **kwargs
+        **kwargs,
     ):
         assert behavior in ["open", "close"]
         self.behavior = behavior
@@ -79,7 +79,7 @@ class TabletopLaptopInteraction(Tabletop, DexMGConfigHelper):
             distractor_config=distractor_config,
             use_distractors=use_distractors,
             *args,
-            **kwargs
+            **kwargs,
         )
 
     def _reset_internal(self):

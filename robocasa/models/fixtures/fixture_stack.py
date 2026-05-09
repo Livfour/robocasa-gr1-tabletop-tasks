@@ -197,12 +197,12 @@ class FixtureStack:
         """
         if "size" not in config or None in config["size"]:
             raise ValueError(
-                "Size for stacks must be specified explicitely, " "received:",
+                "Size for stacks must be specified explicitely, received:",
                 config["size"],
             )
         if "levels" not in config or "percentages" not in config:
             raise ValueError(
-                'Both "levels" and "percentages" ' "must be specified for fixture stack"
+                'Both "levels" and "percentages" must be specified for fixture stack'
             )
         if len(config["levels"]) != len(config["percentages"]):
             raise ValueError(
@@ -212,5 +212,5 @@ class FixtureStack:
         for level in config["levels"]:
             if type(level) == list and len(level) != 2:
                 raise ValueError(
-                    "There can be at most 2 fixtures per level " "in fixture stacks"
+                    "There can be at most 2 fixtures per level in fixture stacks"
                 )

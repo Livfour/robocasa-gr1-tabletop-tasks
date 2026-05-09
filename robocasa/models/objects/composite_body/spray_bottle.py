@@ -1,4 +1,3 @@
-
 from robosuite.models.objects import (
     BoxObject,
     CompositeBodyObject,
@@ -59,9 +58,9 @@ class SprayBottleObject(CompositeBodyObject):
         self.square_base_width = square_base_width
         self.square_base_height = square_base_height
 
-        assert (
-            self.top_length > self.cone_inner_radius
-        ), "top needs to stick out past neck"
+        assert self.top_length > self.cone_inner_radius, (
+            "top needs to stick out past neck"
+        )
 
         # Create objects
         objects = []
@@ -168,9 +167,7 @@ class SprayBottleObject(CompositeBodyObject):
         # define slide joint for trigger
         rel_joint_pos = [0, 0, 0]  # at trigger
         joint_lim_min = 0.0
-        joint_lim_max = (
-            self.top_length
-        )  # trigger was shifted to left by 0.5 * top_length, so allow it to go to right by top_length
+        joint_lim_max = self.top_length  # trigger was shifted to left by 0.5 * top_length, so allow it to go to right by top_length
         slide_joint = {
             "name": "trigger_slide",
             "type": "slide",

@@ -107,9 +107,9 @@ class TabletopPnP(Tabletop, DexMGConfigHelper):
             if self.target_container
             else "counter"
         )
-        ep_meta[
-            "lang"
-        ] = f"pick the {obj_lang} from the {source_container_lang} and place it in the {target_container_lang}"
+        ep_meta["lang"] = (
+            f"pick the {obj_lang} from the {source_container_lang} and place it in the {target_container_lang}"
+        )
         return ep_meta
 
     def _get_obj_cfgs(self):
@@ -767,9 +767,9 @@ class PnPVegetableBowlToPlate(TabletopPnP):
     def get_ep_meta(self):
         ep_meta = super().get_ep_meta()
         veg_lang = self.get_obj_lang(obj_name="obj")
-        ep_meta[
-            "lang"
-        ] = f"pick the {veg_lang} from the bowl and place it on the empty plate"
+        ep_meta["lang"] = (
+            f"pick the {veg_lang} from the bowl and place it on the empty plate"
+        )
         return ep_meta
 
     def _get_obj_cfgs(self):
@@ -1401,9 +1401,9 @@ class PnPCupToDishRackUpperLevel(TabletopPnP):
         ep_meta = super().get_ep_meta()
         obj_lang = self.get_obj_lang()
         target_container_lang = self.get_obj_lang(obj_name="container")
-        ep_meta[
-            "lang"
-        ] = f"pick the {obj_lang} from the {target_container_lang} and place it on the level #{self.target_site_id + 1} of the the {target_container_lang}"
+        ep_meta["lang"] = (
+            f"pick the {obj_lang} from the {target_container_lang} and place it on the level #{self.target_site_id + 1} of the the {target_container_lang}"
+        )
         return ep_meta
 
 

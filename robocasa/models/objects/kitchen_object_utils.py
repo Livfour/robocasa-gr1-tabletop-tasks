@@ -133,7 +133,6 @@ class ObjCat:
 # update OBJ_CATEGORIES with ObjCat instances. Maps name to the different registries it can belong to
 # and then maps the registry to the ObjCat instance
 for name, kwargs in OBJ_CATEGORIES.items():
-
     # get the properties that are common across registries
     common_properties = deepcopy(kwargs)
     valid_properties = [

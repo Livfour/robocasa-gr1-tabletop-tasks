@@ -20,7 +20,6 @@ dc5_tasks_info = generate_task_classes(
 
 
 if __name__ == "__main__":
-
     RED = "\033[91m"
     GREEN = "\033[92m"
     YELLOW = "\033[93m"

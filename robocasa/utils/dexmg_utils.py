@@ -25,9 +25,7 @@ class DexMGConfigHelper:
     class AttrDict(dict):
         def __getattr__(self, key):
             if key not in self:
-                self[
-                    key
-                ] = (
+                self[key] = (
                     DexMGConfigHelper.AttrDict()
                 )  # Create a new AttrDict if key doesn't exist
             return self[key]

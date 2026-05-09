@@ -23,7 +23,7 @@ class Accessory(Fixture):
             duplicate_collision_geoms=False,
             pos=pos,
             *args,
-            **kwargs
+            **kwargs,
         )
 
 
@@ -179,7 +179,7 @@ class WallAccessory(Fixture):
             duplicate_collision_geoms=False,
             pos=pos,
             *args,
-            **kwargs
+            **kwargs,
         )
 
         # TODO add in error checking for rotated walls

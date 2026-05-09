@@ -1,7 +1,6 @@
 from robosuite.models.objects import CompositeBodyObject, BoxObject, Bin
 
 
-
 class StackedBoxObject(CompositeBodyObject):
     """
     Two boxes - one stacked on top of the other.
@@ -21,7 +20,6 @@ class StackedBoxObject(CompositeBodyObject):
         friction=None,
         make_box_2_transparent=False,
     ):
-
         # Object properties
 
         # half-sizes of first (bottom) box

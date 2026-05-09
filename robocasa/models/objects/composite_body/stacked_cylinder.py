@@ -1,7 +1,6 @@
 from robosuite.models.objects import CompositeBodyObject, BoxObject, CylinderObject
 
 
-
 class StackedCylinderObject(CompositeBodyObject):
     """
     Two cylinders - one stacked on top of the other.
@@ -23,7 +22,6 @@ class StackedCylinderObject(CompositeBodyObject):
         square_base_width=None,
         square_base_height=None,
     ):
-
         # Object properties
 
         # radius of first (bottom) cylinder and second (top) cylinder

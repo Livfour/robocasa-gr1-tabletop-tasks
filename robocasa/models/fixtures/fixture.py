@@ -195,7 +195,7 @@ class Fixture(MujocoXMLObject):
         # calculate and set scale according to specification
         scale = [None, None, None]
         cur_size = [self.width, self.depth, self.height]
-        for (i, t) in enumerate(size):
+        for i, t in enumerate(size):
             if t is not None:
                 scale[i] = t / cur_size[i]
 
@@ -329,7 +329,7 @@ class Fixture(MujocoXMLObject):
         Args:
             pos_dict (dict): Dictionary of sites and their new positions
         """
-        for (name, pos) in pos_dict.items():
+        for name, pos in pos_dict.items():
             self._bounds_sites[name].set("pos", array_to_string(pos))
 
     def get_ext_sites(self, all_points=False, relative=True):

@@ -146,9 +146,7 @@ def download_and_extract_zip(
             return
 
     if prompt_before_download:
-        ans = input(
-            "Assets to be downloaded may be a few Gb. Proceed? (y/n) "
-        )
+        ans = input("Assets to be downloaded may be a few Gb. Proceed? (y/n) ")
 
         if ans == "y":
             print(colored("Proceeding.", "yellow"))

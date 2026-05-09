@@ -308,9 +308,9 @@ class Tabletop(ManipulationEnv, metaclass=TabletopEnvMeta):
         self.obj_instance_split = obj_instance_split
 
         if layout_and_style_ids is not None:
-            assert (
-                layout_ids is None and style_ids is None
-            ), "layout_ids and style_ids must both be set to None if layout_and_style_ids is set"
+            assert layout_ids is None and style_ids is None, (
+                "layout_ids and style_ids must both be set to None if layout_and_style_ids is set"
+            )
             self.layout_and_style_ids = layout_and_style_ids
         else:
             layout_ids = SceneRegistry.unpack_tabletop_layout_ids(layout_ids)

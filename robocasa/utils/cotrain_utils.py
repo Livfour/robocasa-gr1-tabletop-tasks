@@ -1,6 +1,7 @@
 """
 Utility functions and constants for co-training with real robot.
 """
+
 from robosuite.models.robots.manipulators.gr1_robot import GR1
 
 # Initial pose configuration for co-training with real robot

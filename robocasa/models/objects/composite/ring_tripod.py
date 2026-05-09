@@ -18,7 +18,6 @@ class RingTripodObject(CompositeObject):
         self,
         name,
     ):
-
         ### TODO: make this object more general (with more args and configuration options) later ###
 
         # Set object attributes

@@ -25,8 +25,7 @@ FIXTURES = dict(
     # slide_cabinet=SlideCabinet,
 )
 # fixtures that are attached to other fixtures, disables positioning system in this script
-FIXTURES_INTERIOR = dict(
-)
+FIXTURES_INTERIOR = dict()
 
 ALL_SIDES = ["left", "right", "front", "back", "bottom", "top"]
 
@@ -47,7 +46,7 @@ def check_syntax(fixture):
     if "align_to" in fixture or "side" in fixture or "alignment" in fixture:
         if not ("align_to" in fixture and "side" in fixture):
             raise ValueError(
-                'Both or neither of "align_to" and ' '"side" need to be specified.'
+                'Both or neither of "align_to" and "side" need to be specified.'
             )
         if "pos" in fixture:
             raise ValueError("Cannot specify both relative and absolute positions.")

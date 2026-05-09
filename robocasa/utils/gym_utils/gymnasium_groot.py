@@ -28,10 +28,13 @@ class GrootRoboCasaEnv(RoboCasaEnv):
                 low=0, high=255, shape=(*FINAL_IMAGE_RESOLUTION, 3), dtype=np.uint8
             )
             if mapped_name == "video.ego_view_pad_res256_freq20":
-                self.observation_space[
-                    "video.ego_view_bg_crop_pad_res256_freq20"
-                ] = spaces.Box(
-                    low=0, high=255, shape=(*FINAL_IMAGE_RESOLUTION, 3), dtype=np.uint8
+                self.observation_space["video.ego_view_bg_crop_pad_res256_freq20"] = (
+                    spaces.Box(
+                        low=0,
+                        high=255,
+                        shape=(*FINAL_IMAGE_RESOLUTION, 3),
+                        dtype=np.uint8,
+                    )
                 )
         if isinstance(self.env.robots[0].robot_model, GR1ArmsOnly):
             self.observation_space["annotation.human.coarse_action"] = spaces.Text(
@@ -42,9 +45,9 @@ class GrootRoboCasaEnv(RoboCasaEnv):
                 max_length=256, charset=ALLOWED_LANGUAGE_CHARSET
             )
         else:
-            self.observation_space[
-                "annotation.human.action.task_description"
-            ] = spaces.Text(max_length=256, charset=ALLOWED_LANGUAGE_CHARSET)
+            self.observation_space["annotation.human.action.task_description"] = (
+                spaces.Text(max_length=256, charset=ALLOWED_LANGUAGE_CHARSET)
+            )
         self.action_space = self.key_converter.deduce_action_space(self.env)
 
         self.verbose = False
@@ -99,19 +102,19 @@ class GrootRoboCasaEnv(RoboCasaEnv):
                 raw_obs[camera_name + "_image"]
             )
             if mapped_name == "video.ego_view_pad_res256_freq20":
-                obs[
-                    "video.ego_view_bg_crop_pad_res256_freq20"
-                ] = GrootRoboCasaEnv.process_img_cotrain(
-                    raw_obs[camera_name + "_image"]
+                obs["video.ego_view_bg_crop_pad_res256_freq20"] = (
+                    GrootRoboCasaEnv.process_img_cotrain(
+                        raw_obs[camera_name + "_image"]
+                    )
                 )
         if isinstance(self.env.robots[0].robot_model, GR1ArmsOnly):
-            obs[
-                "annotation.human.coarse_action"
-            ] = f"locked_waist: {raw_obs['language']}"
+            obs["annotation.human.coarse_action"] = (
+                f"locked_waist: {raw_obs['language']}"
+            )
         elif isinstance(self.env.robots[0].robot_model, GR1ArmsAndWaist):
-            obs[
-                "annotation.human.coarse_action"
-            ] = f"unlocked_waist: {raw_obs['language']}"
+            obs["annotation.human.coarse_action"] = (
+                f"unlocked_waist: {raw_obs['language']}"
+            )
         else:
             obs["annotation.human.action.task_description"] = raw_obs["language"]
         return obs

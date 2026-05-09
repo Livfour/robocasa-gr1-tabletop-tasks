@@ -163,9 +163,9 @@ def playback_trajectory_with_obs(
             one to output a video with multiple image observations concatenated horizontally.
         first (bool): if True, only use the first frame of each episode.
     """
-    assert (
-        image_names is not None
-    ), "error: must specify at least one image observation to use in @image_names"
+    assert image_names is not None, (
+        "error: must specify at least one image observation to use in @image_names"
+    )
     video_count = 0
 
     traj_len = traj_grp["obs/{}".format(image_names[0] + "_image")].shape[0]
@@ -303,9 +303,9 @@ def make_env_from_args(args):
 
     env_meta = get_env_metadata_from_dataset(dataset_path=args.dataset)
     if args.use_abs_actions:
-        env_meta["env_kwargs"]["controller_configs"][
-            "control_delta"
-        ] = False  # absolute action space
+        env_meta["env_kwargs"]["controller_configs"]["control_delta"] = (
+            False  # absolute action space
+        )
 
     env_kwargs = env_meta["env_kwargs"]
     env_kwargs["env_name"] = env_meta["env_name"]
@@ -453,9 +453,9 @@ def playback_dataset(args):
 
     if args.use_obs:
         assert write_video, "playback with observations can only write to video"
-        assert (
-            not args.use_actions and not args.use_abs_actions
-        ), "playback with observations is offline and does not support action playback"
+        assert not args.use_actions and not args.use_abs_actions, (
+            "playback with observations is offline and does not support action playback"
+        )
 
     try:
         f = h5py.File(args.dataset, "r")

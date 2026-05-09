@@ -49,7 +49,6 @@ class LightbulbObject(CompositeBodyObject):
         density=100.0,
         friction=None,
     ):
-
         # Object properties
 
         # radii of alternating cylinders for base

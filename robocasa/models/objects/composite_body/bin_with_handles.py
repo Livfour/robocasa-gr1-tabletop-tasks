@@ -1,7 +1,6 @@
 from robosuite.models.objects import CompositeBodyObject, BoxObject, Bin
 
 
-
 class BinWithHandles(CompositeBodyObject):
     """
     Bin with simple square handles on each side.
@@ -22,7 +21,6 @@ class BinWithHandles(CompositeBodyObject):
         density=1000.0,
         friction=None,
     ):
-
         # Object properties
 
         # FULL size of bin

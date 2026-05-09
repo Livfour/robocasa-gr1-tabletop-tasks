@@ -1,4 +1,3 @@
-
 from robosuite.models.objects import CompositeObject
 from robosuite.utils.mjcf_utils import add_to_dict, CustomMaterial
 
@@ -15,7 +14,6 @@ class NeedleObject(CompositeObject):
         self,
         name,
     ):
-
         ### TODO: make this object more general (with more args and configuration options) later ###
 
         # Set object attributes

@@ -122,7 +122,7 @@ class BarHandle(Handle):
         # connector_pad=0.05,
         handle_pad=0.04,
         *args,
-        **kwargs
+        **kwargs,
     ):
         # z-direction padding for top and bottom connectors
         # self.connector_pad = connector_pad
@@ -277,7 +277,7 @@ class KnobHandle(Handle):
             xml="fixtures/handles/knob_handle.xml",
             # length=length,
             *args,
-            **kwargs
+            **kwargs,
         )
 
         # z-direction padding for handle from sides of cabinet

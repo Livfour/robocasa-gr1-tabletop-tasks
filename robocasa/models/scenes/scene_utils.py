@@ -131,8 +131,9 @@ def load_style_config(style, fixture_config):
                 config[k] = v
         else:
             raise ValueError(
-                'Did not find style that matches "{}" for '
-                'fixture type "{}"'.format(cfg_id, fixture_type)
+                'Did not find style that matches "{}" for fixture type "{}"'.format(
+                    cfg_id, fixture_type
+                )
             )
     return config
 

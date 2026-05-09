@@ -6,7 +6,6 @@ from robosuite.models.objects import (
 )
 
 
-
 class InverseStackedCylinderObject(CompositeBodyObject):
     """
     Inverse of stacked cylinder object, where the top piece is a hollow cylinder object
@@ -29,7 +28,6 @@ class InverseStackedCylinderObject(CompositeBodyObject):
         square_base_width=None,
         square_base_height=None,
     ):
-
         # Object properties
 
         # radius of first (bottom) cylinder and inner radius of second (top) hollow cylinder

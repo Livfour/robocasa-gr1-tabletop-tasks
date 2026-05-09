@@ -343,7 +343,6 @@ class DividedWindowCabinetPanel(CabinetPanel):
     """
 
     def __init__(self, name, trim_th=0.02, trim_size=0.08, *args, **kwargs):
-
         self.trim_th = trim_th
         self.trim_size = trim_size
 

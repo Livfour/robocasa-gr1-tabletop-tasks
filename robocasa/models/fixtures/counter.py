@@ -597,7 +597,7 @@ class Counter(ProcGenFixture):
             dict: dictionary of reset regions
         """
         all_geoms = []
-        for (k, v) in self._get_counter_geoms().items():
+        for k, v in self._get_counter_geoms().items():
             # only reset on top geoms
             if not k.startswith("top"):
                 continue

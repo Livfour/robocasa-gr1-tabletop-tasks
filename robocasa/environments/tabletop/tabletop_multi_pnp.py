@@ -166,7 +166,7 @@ class PutAllObjectsInContainer(Tabletop, DexMGConfigHelper):
         task_spec_0 = {}
         for i in range(PutAllObjectsInContainer.NUM_OBJECTS):
             # Subtask to grasp object i
-            task_spec_0[f"subtask_{2*i+1}"] = dict(
+            task_spec_0[f"subtask_{2 * i + 1}"] = dict(
                 object_ref=f"obj_{i}",
                 subtask_term_signal=f"grasp_obj_{i}",
                 subtask_term_offset_range=(5, 10),
@@ -178,7 +178,7 @@ class PutAllObjectsInContainer(Tabletop, DexMGConfigHelper):
                 apply_noise_during_interpolation=True,
             )
             # Subtask to move object i to container
-            task_spec_0[f"subtask_{2*i+2}"] = dict(
+            task_spec_0[f"subtask_{2 * i + 2}"] = dict(
                 object_ref="container",
                 subtask_term_signal=f"obj_{i}_in_container",
                 subtask_term_offset_range=None,
@@ -191,7 +191,7 @@ class PutAllObjectsInContainer(Tabletop, DexMGConfigHelper):
             )
 
         # Set final subtask's termination signal to 0
-        task_spec_0[f"subtask_{2*PutAllObjectsInContainer.NUM_OBJECTS}"][
+        task_spec_0[f"subtask_{2 * PutAllObjectsInContainer.NUM_OBJECTS}"][
             "subtask_term_signal"
         ] = None
 

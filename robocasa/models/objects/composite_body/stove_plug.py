@@ -55,7 +55,6 @@ class StovePlugObject(CompositeBodyObject):
         cylinder_args=None,
         lightbulb_args=None,
     ):
-
         # Object properties
 
         # half sizes for stove base box object
